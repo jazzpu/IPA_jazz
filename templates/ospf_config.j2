@@ -1,0 +1,7 @@
+router ospf {{ ospf_process_id }} vrf {{ ospf_vrf }}
+{% for network in ospf_networks %}
+network {{ network.address }} {{ network.wildcard }} area {{ network.area }}
+{% endfor %}
+{% if default_information_originate %}
+default-information originate
+{% endif %}

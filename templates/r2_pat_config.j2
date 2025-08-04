@@ -1,0 +1,10 @@
+{% for network in acl_networks %}
+access-list {{ acl_id }} permit ip {{ network.address }} {{ network.wildcard }} any
+{% endfor %}
+{% for interface in inside_interfaces %}
+interface {{ interface }}
+ip nat inside
+{% endfor %}
+interface {{ outside_interface }}
+ip nat outside
+ip nat inside source list {{ acl_id }} interface {{ outside_interface }} vrf {{ nat_vrf }} overload
