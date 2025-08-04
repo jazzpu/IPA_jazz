@@ -11,6 +11,10 @@ Netmiko_lab:
 - vrf configurations are separated from global configurations.
     
 - when pinging from a router with vrf(s), you must include which vrf it is pinging **from.**\n
+
+Netmiko_jinja2_lab:
+
+- ubuntu cloud guest is able to only ping inside the 10.42.x.x network !
     
 issues I faced:
     
