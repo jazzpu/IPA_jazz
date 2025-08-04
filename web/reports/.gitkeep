@@ -1,0 +1,3 @@
+# This file ensures the reports directory is tracked by Git
+# Health monitoring reports will be saved here
+# Format: network_health_report_YYYYMMDD_HHMMSS.json
